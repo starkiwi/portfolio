@@ -1,0 +1,59 @@
+html {
+    background-image: linear-gradient(to bottom, #101010, #0e0e15);
+}
+
+body {
+    font-family: 'Fira Code';
+	color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*---------HERO IMAGE---------------*/
+.hero_wrapper {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/map_long.jpg");
+	background-color: #cccccc;
+	padding: 2em;
+}
+
+.hero_text {
+	margin-left: 3em;
+}
+
+/*----------SLICKNAV------------------*/
+.slicknav_menu {
+	display:none;
+}
+
+@media screen and (max-width: 40em) {
+	/* #menu is the original menu */
+	.js #menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+}
+
+
+/*---------GALLERY--------------*/
+.gallery {
+	display: grid;
+}
+
+.card {
+	width: fit-content;
+	background-color: #0e0e15;
+	box-shadow: 0 4px 8px rgba(215, 215, 215, 0.2);
+	padding: 0.5em;
+	transition: 0.3s;
+	border-radius: 5px;
+	border: 0.2em, solid, white;
+}
+
+/* .card :hover {
+	box-shadow: 0 8px 16px rgba(215, 215, 215, 0.2);
+} <-----WAS NOT WORKING*/
