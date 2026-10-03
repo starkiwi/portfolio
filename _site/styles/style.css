@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-	padding: 1em;
+  padding: 1em;
   text-align: center;
   font-size: clamp(2.8rem, 6.5vw, 5.5rem);
   font-weight: 300;
@@ -18,29 +18,75 @@ h1 {
   animation: fadeUp 1.4s var(--silk-ease) 0.4s forwards;
 }
 
-ul {
-  list-style-type: none;
+/*--------------NAV BAR----------------*/
+nav {
+background-color: #101010;
+  position: sticky;
+  top: 0;
+  overflow: visible;
+  z-index: 10;
 }
+
+nav ul {
+  background-color: #101010;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+  width: 100%;
+}
+
+nav li {
+  text-align: center;
+  display: inline;
+  margin: auto;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 1.1em;
+}
+
+nav li + li {
+	border-left: 0.1em solid white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav::after {
+	z-index: 10;
+	content: '';
+	position: absolute;
+	bottom: -2.3em; /* Adjust overlap */
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+	height: 2.3em; /* Fade height */
+	background-image: linear-gradient(to bottom, #101010, #10101000);
+	}
 
 /*-----------IMPORTED HERO-------------*/
 .hero {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 2em;
   padding-bottom: 2em;
   position: relative;
 }
 .hero-grid {
   position: absolute;
-  bottom: 0;
+  z-index: -10;
+  top: 0;
   left: 50%;
-  height: 80%;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   transform: translateX(-50%);
-  z-index: 0;
   pointer-events: none;
   --mx: 50%;
   --my: 50%;
@@ -77,12 +123,11 @@ ul {
       rgba(0, 0, 0, 0.25) 70%,
       rgba(0, 0, 0, 0.4) 100%
     );
-  -webkit-mask-composite: source-over;
   mask-composite: add;
 }
 .hero > *:not(.hero-grid) {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .hero-badge {
   display: inline-flex;
@@ -119,7 +164,6 @@ ul {
   letter-spacing: -0.05em;
   line-height: 1;
   transform: translateY(24px);
-  animation: fadeUp 1.4s var(--silk-ease) 0.4s forwards;
 }
 .hero h1 em {
   font-style: normal;

@@ -10,4 +10,7 @@ export default function(eleventyConfig) {
     //add pass through of images
     eleventyConfig.addPassthroughCopy("./images/");
     eleventyConfig.addWatchTarget("./images/");
+
+    eleventyConfig.addPassthroughCopy("./scripting/");
+    eleventyConfig.addWatchTarget("./scripting/");
   };
