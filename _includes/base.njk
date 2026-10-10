@@ -3,42 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kieran Games | CV</title>
+    <title>Kieran Games | {{ title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./slicknav/slicknav.css" />
 </head>
 <body>
-<nav aria-label="Main navigation">
-        <div id="slicknav_menu"></div>
-        <ul id="menu">
-        
-            <li><a href="/"
-            >
-            Home
-            </a></li>
-            
-            <li><a href="/CV/"
-            
-            aria-current="page"
-            >
-            CV
-            </a></li>
-            
-        </ul>
-</nav>
+{% include "nav.njk" %}
 <main>
-
-<!--------CV---------------->
-<h1>CV</h1>
-<object
-data="images/kieran_reid_cv (6).pdf"
-type="application/pdf"
-width="100%"
-title="kieran-cv">
-<p>Sorry, there was an error loading the pdf</p>
-</object>
-
+{{ content | safe }}
 </main>
 </body>
 <!--JQUERY-->

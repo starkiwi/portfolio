@@ -3,61 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kieran Games</title>
+    <title>Kieran Games | Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/slicknav/slicknav.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./slicknav/slicknav.css" />
 </head>
-
 <body>
-    <nav>
+<nav aria-label="Main navigation">
         <div id="slicknav_menu"></div>
         <ul id="menu">
-            <li><a href="#">item 1</a></li>
-            <li><a href="#">item 2</a></li>
-            <li><a href="#">item 3</a></li>
-            <li><a href="#">item 4</a></li>
+        
+            <li><a href="/"
+            
+            aria-current="page"
+            >
+            Home
+            </a></li>
+            
+            <li><a href="/CV/"
+            >
+            CV
+            </a></li>
+            
         </ul>
-    </nav>
-    <!----------------HERO------------------------>
-    <section class="hero" id="hero">
-        <div class="hero-grid"></div>
-        <h1><em>Hi! I'm Kieran!</em><br>I make games! :)</h1>
-        <p class="hero-sub">
-            Enthusiastic, positive, organised Game Developer and Programmer whose projects aim to push modern ideas and impact
-            others.
-        </p>
-        <div class="hero-ctas">
-          <a href="#pricing" class="btn-primary">Start Free Trial</a>
-          <a href="#features" class="btn-secondary">See How It Works</a>
-        </div>
-      </section>
+</nav>
+<main>
+<!----------------HERO------------------------>
+<section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <h1 id="type_text">Hi! I'm Kieran!<br>I make games! :)</h1>
+    <p class="hero-sub">
+        Enthusiastic, positive, organised Game Developer and Programmer whose projects aim to push modern ideas and
+        impact
+        others.
+    </p>
+    <div class="hero-ctas">
+        <a href="#">See my CV</a>
+        <a href="https://github.com/starkiwi" target="_blank">Explore my github</a>
+    </div>
+</section>
 
 <!------------CARD GALLERY-------------------->
 <h1>Projects</h1>
 <section class="gallery">
-                <div class="card">
-                    <img src="images/archivist_square.png" alt="The Archivist title screen">
-                    <div class="caption">
-                        <h4>The Archivist</h4>
-                        <p>A 2d pixel art dark academia platformer</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/froggy_square.jpg" alt="Summer Breeze Screenshot">
-                    <div class="caption">
-                        <h4>Summer Breeze</h4>
-                        <p>A multi-player puzzle game.</p>
-                    </div>
-                </div>
-    </section>
+    <div class="card">
+        <img src="images/archivist_square.png" alt="The Archivist title screen">
+        <div class="caption">
+            <h4>The Archivist</h4>
+            <p>A 2d pixel art dark academia platformer</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/froggy_breeze_square.png" alt="Summer Breeze Screenshot">
+        <div class="caption">
+            <h4>Summer Breeze</h4>
+            <p>A multi-player puzzle game.</p>
+        </div>
+    </div>
+</section>
 <!------------------FOOTER------------------------->
-    <footer>
-        <!-------SOCIAL ICONS--------->
-        <a href="www.linkedin.com/in/kieranreid0003"></a>
-        <a href="https://www.instagram.com/reid_artthings/"></a>
-        <a href="https://github.com/starkiwi"></a>
-    </footer>
+<footer>
+    <!-------SOCIAL ICONS--------->
+    <h2>Find me elsewhere:</h2>
+    <a href="www.linkedin.com/in/kieranreid0003">LinkedIn</a>
+    <a href="https://www.instagram.com/reid_artthings/">Insta</a>
+    <a href="https://github.com/starkiwi">GitHub</a>
+</footer>
+</main>
 </body>
 <!--JQUERY-->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

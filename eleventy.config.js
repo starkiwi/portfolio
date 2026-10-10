@@ -13,4 +13,16 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./scripting/");
     eleventyConfig.addWatchTarget("./scripting/");
+
+    eleventyConfig.ignores.add("_site/**");
+
+    return {
+      dir: {
+        input: ".",
+        includes: "_includes",
+        data: "_data",
+        output: "_site"
+      },
+      templateFormats: ["html", "njk", "md", "11ty.js"]
+    };
   };
