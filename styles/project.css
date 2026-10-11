@@ -1,0 +1,46 @@
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+#description {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.top {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+#square {
+    padding-right: 3em;
+}
+
+em {
+    font-weight: bold;
+}
+
+#demo {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: block;
+    margin: auto;
+    border: none;
+    width: 84%;
+    height: 35em;
+    margin-bottom: 4em;
+}
+
+.code_img {
+    width: 35%;
+    margin: 2em;
+    float: right;
+}

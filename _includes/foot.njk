@@ -1,0 +1,22 @@
+<footer>
+    <ul>
+        {% for item in nav %}
+            <li><a href="{{ item.url }}">
+            {{ item.label }}
+            </a></li>
+            {% endfor %}
+    </ul>
+    <div class="social_icons">
+    <a href="www.linkedin.com/in/kieranreid0003" target="_blank">
+        <img
+        src="/images/linkedin.png">
+    </a>
+    <a href="https://www.instagram.com/reid_artthings/" target="_blank">
+        <img
+        src="/images/instagram.png">
+    </a>
+    <a href="https://github.com/starkiwi" target="_blank">
+        <img src="/images/github.png">
+    </a>
+    </div>
+</footer>

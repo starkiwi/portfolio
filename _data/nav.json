@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Home",
+        "url": "/"
+    },
+    {
+        "label": "CV",
+        "url": "/CV/"
+    },
+    {
+        "label": "The Archivist",
+        "url": "/Archivist/"
+    }
+]

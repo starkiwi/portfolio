@@ -1,0 +1,326 @@
+html {
+  background-image: linear-gradient(to bottom, #101010, #0e0e15, #101010);
+  cursor: crosshair;
+}
+
+body {
+  font-family: "Fira Code";
+  color: #c2c2c2;
+}
+
+h1 {
+  padding: 1em;
+  text-align: center;
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  transform: translateY(24px);
+  animation: fadeUp 1.4s var(--silk-ease) 0.4s forwards;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-left: 0;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: #4554d9;
+  cursor: default;
+}
+
+/*-----------TYPING ANIMATION---------------*/
+
+#type_text {
+    white-space: pre-line;
+}
+
+#type_text::after {
+    content: "|";
+    display: inline;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/*--------------NAV BAR----------------*/
+nav {
+  transform: translateX(-1.5%);
+  background-color: #101010;
+  position: sticky;
+  top: 0;
+  overflow: visible;
+  z-index: 10;
+}
+
+nav ul {
+  background-color: #101010;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+  width: 100%;
+}
+
+nav li {
+  text-align: center;
+  display: inline;
+  margin: auto;
+}
+
+nav li + li {
+  border-left: 0.12em solid #c2c2c2;
+}
+
+nav a {
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 1.2em;
+  color: #c2c2c2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a[aria-current="page"] {
+  color: #4554d9;
+}
+
+nav::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  bottom: -2.3em; /* Adjust overlap */
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 2.3em; /* Fade height */
+  background-image: linear-gradient(to bottom, #101010, #10101000);
+}
+
+nav li:hover > *:not(a[aria-current="page"]) {
+    box-shadow: 0 4px 8px rgba(215, 215, 215, 0.1);
+    zoom: 1.1;
+}
+
+/*-----------IMPORTED HERO-------------*/
+.hero {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+.hero-grid {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  --mx: 50%;
+  --my: 50%;
+  background-image:
+    linear-gradient(to right, rgba(156, 163, 175, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(156, 163, 175, 0.22) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: center bottom;
+  -webkit-mask-image:
+    radial-gradient(
+      circle 300px at var(--mx) var(--my),
+      rgba(0, 0, 0, 1) 0%,
+      transparent 65%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 45%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  mask-image:
+    radial-gradient(
+      circle 300px at var(--mx) var(--my),
+      rgba(0, 0, 0, 1) 0%,
+      transparent 65%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 45%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  mask-composite: add;
+}
+.hero > *:not(.hero-grid) {
+  position: relative;
+  z-index: 0;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(20px);
+  margin-bottom: 40px;
+  transform: translateY(16px);
+  animation: fadeUp 1.2s var(--silk-ease) 0.2s forwards;
+}
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--silver);
+  box-shadow: 0 0 8px rgba(176, 184, 196, 0.4);
+  animation: pulse 3s ease-in-out infinite;
+}
+.hero-badge span {
+  font-size: 10px;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--slate-light);
+}
+
+.hero h1 {
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  transform: translateY(24px);
+}
+.hero h1 em {
+  font-style: normal;
+  font-weight: 400;
+  background: linear-gradient(
+    135deg,
+    var(--ivory),
+    var(--silver),
+    var(--slate-light)
+  );
+}
+.hero-sub {
+  font-weight: 100;
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: var(--slate-light);
+  max-width: 30em;
+  margin: 0em auto 4em;
+  transform: translateY(16px);
+  animation: fadeUp 1.4s var(--silk-ease) 0.6s forwards;
+}
+.hero-ctas {
+  display: flex;
+  gap: 4em;
+  transform: translateY(16px);
+}
+.hero-ctas a {
+    text-decoration: none;
+  padding: 1em;
+  border: solid 0.2em #4554d9;
+  box-shadow: 0 4px 8px rgba(215, 215, 215, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hero-ctas a:hover {
+    background-color: #EEEFFC;
+    color: #101010;
+    transform: translateY(-3px);
+}
+
+/*----------SLICKNAV------------------*/
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  /* #menu is the original menu */
+  .js #menu {
+    display: none;
+  }
+
+  .js .slicknav_menu {
+    display: block;
+  }
+}
+
+/*---------GALLERY--------------*/
+
+.gallery {
+  margin-left: 12%;
+  margin-right: 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+  gap: 4em;
+}
+
+.card {
+  background-color: #0e0e15;
+  box-shadow: 0 4px 8px rgba(215, 215, 215, 0.2);
+  padding: 0.5em;
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 0.2em, solid, #c2c2c2;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.card:hover {
+      box-shadow: 0 8px 16px rgba(215, 215, 215, 0.2);
+      border-width: 0.4em;
+      border-color: #4554d9;
+      transform: translateY(-3px);
+  }
+
+/*--------FOOTER------------*/
+
+footer {
+    padding: 5em;
+    margin-left: 10em;
+    margin-top: 5em;
+}
+
+footer li {
+  transition: all 0.3s ease;
+}
+
+.social_icons {
+  padding-top: 2em;
+  display: flex;
+  gap: 2em;
+}
+
+.social_icons img {
+  width: 2em;
+  transition: all 0.3s ease;
+}
+
+.social_icons img:hover {
+  transform: translateY(-1px);
+}

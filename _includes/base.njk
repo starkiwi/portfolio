@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kieran Games | {{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/slicknav/slicknav.css">
+    {% if stylesheet %}
+    <link rel="stylesheet" href="{{ stylesheet }}">
+    {% endif %} 
+</head>
+<body>
+{% include "nav.njk" %}
+{% block content %}
+<main>
+    {{ content | safe }}
+</main>
+{% endblock %}
+{% include "foot.njk" %}
+</body>
+<!--JQUERY-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-------SCRIPTS----------->
+<script src="/slicknav/jquery.slicknav.min.js"></script>
+<script src="/scripting/scripting.js"></script>
+</html>
