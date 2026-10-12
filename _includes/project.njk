@@ -12,12 +12,14 @@
     <p><em>Dates: </em>{{ dates }}</p>
     <p><em>Roles: </em>{{ roles }}</p>
     <p><em>Tech Stack: </em>{{ tech }}</p>
-    <p><em>Project Link: </em>{{ link }}</p>
+    <p><em>Project Link: </em><a href="{{ link }}" target="_blank">{{ link }}</a></p>
 </div>
 </section>
 <iframe id="demo"
 src="{{ demo }}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<div id="text">
+
+<p id="caption">In case video is not working use link: <a href="{{ demo }}" target="_blank">Here!</a></p>
+<div id="input_content">
     {{ content | safe }}
 </div>
 </main>

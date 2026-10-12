@@ -1,10 +1,20 @@
 <footer>
     <ul>
         {% for item in nav %}
-            <li><a href="{{ item.url }}">
+        {% if item.children %}
+        {% for child in item.children %}
+            <li>
+            <a href="{{ child.url }}">
+            {{ child.label }}
+            </a> &#9642 </li>
+        {% endfor %}
+        {% else %}
+        <li>
+            <a href="{{ item.url }}">
             {{ item.label }}
-            </a></li>
-            {% endfor %}
+            </a> &#9642 </li>
+        {% endif %}
+        {% endfor %}
     </ul>
     <div class="social_icons">
     <a href="www.linkedin.com/in/kieranreid0003" target="_blank">

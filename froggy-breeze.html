@@ -1,0 +1,53 @@
+---
+layout: project.njk
+title: Froggy Breeze
+permalink: /froggy-breeze/
+stylesheet: /styles/project.css
+description: A multiplayer network puzzle game modified off of Atlas Arena's game Polar Winds.
+dates: June 2026 - August 2026
+roles: Lead Programmer, Technical Artist
+tech: TypeScript, THREE.js, VSCode, GitHub
+demo: https://www.youtube.com/embed/mkikQ9BW4JU?si=NsCUm2_AQlmLRLk3
+square: /images/froggy-breeze/froggy_breeze_square.png
+link: https://github.com/atlasarena55555/summer-breeze
+---
+<div id="text">
+    <p>
+        'Froggy Breeze', originally titled 'Summer Breeze' is an adaptation meant to be a future level of Atlas Arena's
+        'Polar Winds'. I worked in a team of 5 to create it in the span of 2 and a half months. We each took on several
+        roles, most people focusing on the design of the game. Since I had the most programming knowledge, I was made
+        Lead Programmer.
+    </p>
+    <p>
+        <em>Froggy? </em>The frog version comes from me just having a bit of fun. I was experimenting with different
+        checkpoint visuals, starting with shapes, and finding flowers worked quite well. After that, I had the idea that
+        the players could be frogs and the empty spaces reminiscent of lily pads.
+    </p>
+    <p>
+        <em>Challenges: </em>The first challenge I faced was reading through and understanding the existing code
+        database we were given. It was a lot, and having never touched TypeScript before, a little confusing. This took
+        up a lot of my time, but by the end I was able to direct my teammates to specific points in the code that needed
+        adjustment.
+    </p>
+    <p>A feature I worked on in particular was the checkpoint (flower) logic. Players needed to collect them in a
+        certain order but still be able to go back and reconnect ones without restarting if they accidentally passed
+        checkpoint 4 before 3.</p>
+    <p>Since the collectibles were already in an array. I was able to filter them to find the checkpoints, which I had
+        added a num property to. From there, I checked chaining, seeing if the previous number was collected
+        (activated).</p>
+    <p>
+        <em>Geometry: </em>To make the changed graphics, I needed to work a lot with 3D geometry. Creating shapes was
+        relatively easy. Creating the flowers and frogs, not so much. Especially since the way they were imported did
+        not allow for easy live-view as I edited the vertices.
+    </p>
+    <p>
+        I created a single page html document where I imported the shape I was working on through some javascript. This
+        worked very well as a quick, optimized live view that I could then paste into our codebase after I had refined
+        the shape to my liking.
+    </p>
+</div>
+<div id="images">
+    <img class="code_img" src="/images/froggy-breeze/collectible_code_01.png">
+    <img class="code_img" src="/images/froggy-breeze/collectible_code_02.png">
+    <img class="code_img" src="/images/froggy-breeze/genflower_code.png">
+</div>

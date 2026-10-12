@@ -56,31 +56,32 @@ a {
 
 /*--------------NAV BAR----------------*/
 nav {
-  transform: translateX(-1.5%);
+  /* transform: translateX(-1.5%); */
   background-color: #101010;
   position: sticky;
   top: 0;
   overflow: visible;
-  z-index: 10;
+  z-index: 15;
 }
 
 nav ul {
   background-color: #101010;
   list-style-type: none;
   text-align: center;
-  padding-top: 1.5em;
+  padding-top: 1em;
   padding-bottom: 0.5em;
   padding-left: 0;
   width: 100%;
 }
 
 nav li {
+  position: relative;
   text-align: center;
   display: inline;
   margin: auto;
 }
 
-nav li + li {
+nav > ul > li + li {
   border-left: 0.12em solid #c2c2c2;
 }
 
@@ -111,9 +112,32 @@ nav::after {
   background-image: linear-gradient(to bottom, #101010, #10101000);
 }
 
-nav li:hover > *:not(a[aria-current="page"]) {
-    box-shadow: 0 4px 8px rgba(215, 215, 215, 0.1);
-    zoom: 1.1;
+nav > ul > li:hover > *:not(a[aria-current="page"]) {
+    box-shadow: 0 4px 8px rgba(215, 215, 215, 0.3);
+    zoom: 1.05;
+    color: #4554d9;
+}
+
+/*-------------SUB MENU----------------*/
+
+nav li ul {
+  z-index: 15;
+  display: none;
+  position: absolute;
+  top: 160%;
+  left: 0;
+}
+
+nav li ul li {
+  background-color: #101010;
+}
+
+nav li:hover ul, nav li:focus-within ul {
+  display: inline-block;
+}
+
+nav ul li ul li:hover > *:not(a[aria-current="page"]){
+    color: #4554d9;
 }
 
 /*-----------IMPORTED HERO-------------*/
@@ -289,6 +313,10 @@ nav li:hover > *:not(a[aria-current="page"]) {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+}
+
+.card a {
+  color: #c2c2c2;
 }
 
 .card:hover {

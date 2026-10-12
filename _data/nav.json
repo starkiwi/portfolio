@@ -8,7 +8,20 @@
         "url": "/CV/"
     },
     {
-        "label": "The Archivist",
-        "url": "/Archivist/"
+        "label": "Projects",
+        "children": [
+            {
+                "label": "The Archivist",
+                "url": "/Archivist/"
+            },
+            {
+                "label": "Froggy Breeze",
+                "url": "/froggy-breeze/"
+            },
+            {
+                "label": "The Jataka Tales",
+                "url": "/Jataka-tales/"
+            }
+        ]
     }
 ]

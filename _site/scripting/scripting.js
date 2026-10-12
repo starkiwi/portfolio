@@ -5,7 +5,9 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 $(function(){
     $('#menu').slicknav({
         prependTo: '#slicknav_menu',
-        label: ''
+        label: '',
+        allowParentLinks: false,
+        showChildren: false
     });
     $('html').addClass('js');
 });

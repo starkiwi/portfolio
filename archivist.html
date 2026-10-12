@@ -1,40 +1,66 @@
 ---
-layout: base.njk
+layout: project.njk
 title: The Archivist
 permalink: /Archivist/
 stylesheet: /styles/project.css
+description: A fantasy academia 2D pixel-art rogue-lite platformer created with Unity
+dates: December 2025 - August 2026
+roles: Indie Game Developer
+tech: Unity, C#, VSCode, Procreate, Photoshop
+demo: https://www.youtube.com/embed/YQEIhWDfVTM?si=uXBM1Ku3t9nZG9gB
+square: /images/archivist/archivist_square.png
 ---
-<h1 id="type_text">The Archivist</h1>
-<p id="description">A fantasy academia 2D pixel-art rogue-lite platformer created with Unity</p>
-
-<section class="top">
-<img id="square" src="/images/archivist/archivist_square.png">
-<div id="info">
-    <br>
-    <p><em>Dates: </em>December 2025 - August 2026</p>
-    <p><em>Roles: </em>Indie Game Developer</p>
-    <p><em>Tech Stack: </em>Unity, C#, VSCode, Procreate, Photoshop</p>
-    <p><em>Project Link: </em></p>
-</div>
-</section>
-<iframe id="demo" src="https://www.youtube.com/embed/YQEIhWDfVTM?si=uXBM1Ku3t9nZG9gB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 <div id="text">
-    <p><em>Abstract: </em>A year ago, the old archivist quit. Poof! Gone with no notice and no trace. Now, Alistair, a (should be) recent graduate in arcane arts, is the new intern, dropped there to dust off the shelves and clean up the mess left by the old archivist. What he discovers beneath the archives is a labyrinth of strange rooms. Each filled with even stranger magic and creatures. What secrets did the old archivist leave behind? And why does no one know where he went?
-        </p>
-        <p>
-        In ‘The Archivist’, you follow Alistair to explore the archive labyrinth, solve puzzles, battle magical creatures, and discover what truly goes on beneath the University of Magical and Mundane Artistry. Done in a classic pixel-art style, it carries a lot of older game nostalgia with many modern twists.
-        <img class="code_img" src="/images/archivist/climb_code.png">
-        </p><p>
-        <em>Gameplay: </em> ‘The Archivist’ is best described as a 2-D metroidvania platformer. Metroidvania games, also known as search action games, are a sub-genre of action-adventure games. The term came about as a portmanteau of the series Metroid and Castlevania, which both featured an interconnected world map with certain parts inaccessible to the player until they levelled up. Overall, the genre focuses on non-linear exploration and guided progression, combining elements of traditional linear platformers with open exploration role-play games. Metroidvanias started out all being 2-D platformers; however, over years of development, the term has become used to describe some modern 3-D games with these characteristics. My game sticks closer to the original definition, being a 2D platformer where the character's main movements are left and right. I begin to take a more modern approach when introducing up and down movement using ladders instead of the traditional jump. Players will find hidden rooms and learn story elements by solving puzzles, not relying on dialogue between characters. Later versions will eventually require them to return to this part of the map to progress the story. Skill progression will also play into later versions as a variety of more powerful spells are added for the player to learn and utilise in battle against high-level enemies. 
-        </p><p>
-        When I started on 'The Archivist' I knew close to nothing about Game Development. Over the course of the following months, I taught myself Unity and build a foundation of fundamentals of game design techniques.
-        </p><p>
-            <img class="code_img" src="/images/archivist/script_obj_code.png">
-        One mechanic I am particularly proud of is the ladders. It took several attempts to figure out how the logic should work. They needed to allow Alistair to go both up and down, unlike most platformers where ladders are only up. Occasionally, the player can jump down from the platform above. In my context, however, that unfortunately would not make sense. These were floors. 
-        </p><p>
-        I ended up creating a specifc set of floor colliders for above the ladders that I could flip when I collision detected Alistair on a ladder. The ladder colliders extend up ever so slightly so when he is at the top, colliding with the ladder, and presses down, he climbs down the ladder. 
-        </p><p>
-        Another challenge was the inventory and interactable objects. Each item that could be interacted with was a scriptable object. This made creation of new object easier and organisation more clear. Their attributes included their specific spirite, name, prompt Alistair would speak when he collided with them, etc.
-    </p>
+<p>
+    <em>Abstract: </em>A year ago, the old archivist quit. Poof! Gone with no notice and no trace. Now, Alistair, a
+    (should be) recent graduate in arcane arts, is the new intern, dropped there to dust off the shelves and clean up
+    the mess left by the old archivist. What he discovers beneath the archives is a labyrinth of strange rooms. Each
+    filled with even stranger magic and creatures. What secrets did the old archivist leave behind? And why does no one
+    know where he went?
+</p>
+<p>
+    In ‘The Archivist’, you follow Alistair to explore the archive labyrinth, solve puzzles, battle magical creatures,
+    and discover what truly goes on beneath the University of Magical and Mundane Artistry. Done in a classic pixel-art
+    style, it carries a lot of older game nostalgia with many modern twists.
+</p>
+<p>
+    <em>Gameplay: </em> ‘The Archivist’ is best described as a 2-D metroidvania platformer. Metroidvania games, also
+    known as search action games, are a sub-genre of action-adventure games. The term came about as a portmanteau of the
+    series Metroid and Castlevania, which both featured an interconnected world map with certain parts inaccessible to
+    the player until they levelled up. Overall, the genre focuses on non-linear exploration and guided progression,
+    combining elements of traditional linear platformers with open exploration role-play games. Metroidvanias started
+    out all being 2-D platformers; however, over years of development, the term has become used to describe some modern
+    3-D games with these characteristics. My game sticks closer to the original definition, being a 2D platformer where
+    the character's main movements are left and right. I begin to take a more modern approach when introducing up and
+    down movement using ladders instead of the traditional jump. Players will find hidden rooms and learn story elements
+    by solving puzzles, not relying on dialogue between characters. Later versions will eventually require them to
+    return to this part of the map to progress the story. Skill progression will also play into later versions as a
+    variety of more powerful spells are added for the player to learn and utilise in battle against high-level enemies.
+</p>
+<p>
+    When I started on 'The Archivist' I knew close to nothing about Game Development. Over the course of the following
+    months, I taught myself Unity and build a foundation of fundamentals of game design techniques.
+</p>
+<p>
+    One mechanic I am particularly proud of is the ladders. It took several attempts to figure out how the logic should
+    work. They needed to allow Alistair to go both up and down, unlike most platformers where ladders are only up.
+    Occasionally, the player can jump down from the platform above. In my context, however, that unfortunately would not
+    make sense. These were floors.
+</p>
+<p>
+    I ended up creating a specifc set of floor colliders for above the ladders that I could flip when I collision
+    detected Alistair on a ladder. The ladder colliders extend up ever so slightly so when he is at the top, colliding
+    with the ladder, and presses down, he climbs down the ladder.
+</p>
+<p>
+    Another challenge was the inventory and interactable objects. Each item that could be interacted with was a
+    scriptable object. This made creation of new object easier and organisation more clear. Their attributes included
+    their specific spirite, name, prompt Alistair would speak when he collided with them, etc.
+</p>
+</div>
+<div id="images">
+<img class="code_img" src="/images/archivist/alistair.png">
+<img class="code_img" src="/images/archivist/climb_code.png">
+<img class="code_img" src="/images/archivist/objects.jpg">
+<img class="code_img" src="/images/archivist/script_obj_code.png">
 </div>
