@@ -128,12 +128,17 @@ nav li ul {
   left: 0;
 }
 
+nav ul li ul li + li {
+  display: block;
+  margin-top: 0.3em;
+}
+
 nav li ul li {
   background-color: #101010;
 }
 
 nav li:hover ul, nav li:focus-within ul {
-  display: inline-block;
+  display: block;
 }
 
 nav ul li ul li:hover > *:not(a[aria-current="page"]){

@@ -1,0 +1,41 @@
+---
+layout: project.njk
+title: Ritzy
+permalink: /Ritzy/
+stylesheet: /styles/project.css
+description: A 2D pixel-art top-down stealthy minigame.
+dates: September 11th - 19th 2026 
+roles: Gameplay Programmer, Game Designer
+tech: Unity, C#, JetBrains Rider, Procreate
+demo: https://www.youtube.com/embed/gtDpPkOz8eA?si=2SbwLZbHrNDj_36m
+square: /images/ritzy/ritzy-square.png
+link: https://lord-starkiwi.itch.io/ritzy
+---
+<div id="text">
+<p>
+    <em>Abstract: </em>Ritzy is a strange little creature whose mission is to escape the heavily guarded compound she is trapped in. In this maze, stealth is the key. Stay hidden from the guards, and you may just find your way out.
+</p>
+<p>
+    This minigame was created as a solo project in the span of a week for The Artists Tavern Game Jam - Autumn '26 on itch.io with the theme <em>'IN THE SHADOWS'</em>.
+</p>
+<p>
+    At the end of the jam, it ranked in the top 5, being #1 in Gameplay: How Enjoyable it is to Play.
+</p>
+<p>
+    Personally it was the shortest timeframe I have had to make a full game able to be played by and presented to an audience. I learned a lot in that time and was able to really test my knowledge. Because I didn't have much time for debugging or figuring things out.
+</p>
+<p>
+    One aspect I am incredibly proud of is the field of view cones. I spent the majority of that week working on them. And I had to review the radian circle, something I haven't looked at since secondary school. Each cone is made up of a set of raycasts that extend from the enemy position. They branch out from the centre angle to a specified angle. The angles get recalculated if they hit something other than the player. The enemy script then handles what happens if the field of view says the player is detected. 
+</p>
+<p>
+    <em>Credits: </em>Original tileset is by efetusder on itch.io and audio was made using a template on 8-Bit Composer.
+</p>
+<p><em>Bug Notice: </em>Occasionally the 'you were detected' message will pop up upon load. Just click 'try again' a few times and the game should play normally. Despite resetting setActive to false on the start, sometimes the 'you were detected' canvas breaks through. I could not and didn't have the time to figure out why.
+</p>
+</div>
+<div id="images">
+    <img src="/images/ritzy/ritzy-screen-01.png">
+    <img src="/images/ritzy/code-snap.png">
+    <img src="/images/ritzy/ritzy-screen-02.png">
+    <img src="/images/ritzy/ritzy-screeen-03.png">
+</div>
