@@ -1,0 +1,73 @@
+---
+layout: project.njk
+title: Yaoguai Jump
+permalink: /yaoguai-jump/
+stylesheet: /styles/project.css
+description: A 3D time-based combat game with spooky vibes set in ancient China.
+dates: October 26th - 29th 2026
+roles: Programmer, UI Developer, Cultural Consultant
+tech: Unity, C#, Github, JetBrains Rider, Illustrator
+demo:
+square: /images/yaoguai-jump/yaoguai-square.png
+link: https://phroggydev.itch.io/yaoguai-jump
+---
+<div id="text">
+    <p>
+        <em>Lets jump some Yaoguai!</em>
+    </p>
+    <p>
+        <em>Gameplay: </em>In ‘Yaoguai Jump’, you play as a young Spanish boy named Pedro, who through time travel
+        hijinks, is currently a Daoist priest in training in ancient China! Hop skip and jump your way your way around
+        the arena to beat up the Yaoguai, and progress in your training!
+    </p>
+    <p>
+        <em>Application of Themes: </em> This game was created as a part of a team for the University of Portsmouth Game
+        Jam Autumn 2026. Our themes were <i>Spooky, Pedro Antonio Gines Esteo,</i> and, <i>Chewang, Lanling County</i>.
+        We decided to set our game in ancient Chewang which, in lack of extensive environment, was simplified to ancient
+        China. To implement the spooky theme we made our main enemy Yaoguai. Similar to Yokai in Japan, Yaoguai are
+        supernatural creates often nefarious in nature. Our enemies are a subset of Yaoguai known as Jiangshi. They are
+        zombie/vampire-like creatures and the name literally translates to 'stiff corpse'. Jiangshi are often exorcised
+        by Taoist or Daoist priests using talismans. Placing one on their head petrifies them.
+    <p>
+        Our Jiangshi move towards the player in very specific ways. We programmed them so their movements are
+        representative of the 6 types of chess pieces. The enemies are confined to a grid where they locate the next
+        valid position closest to the player.
+    </p>
+    <p>
+        Meanwhile the player character, named Pedro after Pedro Antonio Gines Esteo, has a seperate attack collider at
+        his feet so that he may only defeat the Jiangshi by jumping on their heads.
+    </p>
+    <p>
+        <em>UI: </em>While I helped with some small functions collecting and setting variables from the player and
+        overall scene changes, UI was my main contribution in this project. I developed a timer that the other
+        programmers based the enemy waves on, HUD icons that gave in-game player feedback, a leaderboard to display top
+        5 scores stored in a json file, and other canvases to assist with cleanly opening and closing gameplay.
+    </p>
+    <p>
+        The leaderboard in particular was interesting. Name input is collected from the player with a three character
+        limit. I then decided to have it sort the file when it is giving me the data to populate the leaderboard using
+        .OrderByDescending() with a limit to only give me the top 5. While this works for a small game, I foresee issues
+        with the json file potentially becoming too big. There is a hotkey to clear the file/leaderboard, yet that is a
+        dev feature. In the future it may be better to validate the entry against other entries so the json file will
+        only contain the top 5. Additionally adding duplicate name validation would be a good addition.
+    </p>
+    <p>
+        Credits given to my amazing game jam team:
+        <br>
+        Ryan Bester - Programmer
+        <br>
+        Kieran Reid - Programmer and UI development
+        <br>
+        Riley Noles - Programmer
+        <br>
+        George Smith - Character Artist
+        <br>
+        Will - Environment Artist
+        <br>
+        Matthew Shelley - Music and Sound Effects
+        <br>
+        Grace Lewis - Producer
+    </p>
+</div>
+<div id="images">
+</div>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kieran Reid Game Development Portfolio">
+    <meta name="type" content="website">
+    <meta name="author" content="Kieran Reid">
+    <meta name="image" content="https://postimg.cc/94cZC5cj">
+    <title>Kieran Games | Yaoguai Jump</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/slicknav/slicknav.css">
+    
+    <link rel="stylesheet" href="/styles/project.css">
+     
+</head>
+<body>
+<nav aria-label="Main navigation">
+        <div id="slicknav_menu"></div>
+        <ul id="menu">
+        
+            <li>
+
+            
+            <a href="/"
+            >
+            Home
+            </a>
+            
+            </li>
+            
+            <li>
+
+            
+            <a href="/CV/"
+            >
+            CV
+            </a>
+            
+            </li>
+            
+            <li>
+
+            
+            <a href="#" class="submenu-parent">
+            Projects
+            </a>
+
+            <ul>
+            
+            <li>
+            <a href="/Archivist/"
+            >
+            The Archivist
+            </a>
+            </li>
+            
+            <li>
+            <a href="/froggy-breeze/"
+            >
+            Froggy Breeze
+            </a>
+            </li>
+            
+            <li>
+            <a href="/yaoguai-jump/"
+            
+            aria-current="page"
+            >
+            Yaoguai Jump
+            </a>
+            </li>
+            
+            <li>
+            <a href="/Ritzy/"
+            >
+            Ritzy
+            </a>
+            </li>
+            
+            <li>
+            <a href="/Jataka-tales/"
+            >
+            The Jataka Tales
+            </a>
+            </li>
+            
+            </ul>
+
+            
+            </li>
+            
+        </ul>
+</nav>
+
+<main class="project-page">
+   <h1 id="type_text">Yaoguai Jump</h1>
+<p id="description">A 3D time-based combat game with spooky vibes set in ancient China.</p>
+
+<section class="top">
+<img id="square" src="/images/yaoguai-jump/yaoguai-square.png">
+<div id="info">
+    <br>
+    <p><em>Dates: </em>October 26th - 29th 2026</p>
+    <p><em>Roles: </em>Programmer, UI Developer, Cultural Consultant</p>
+    <p><em>Tech Stack: </em>Unity, C#, Github, JetBrains Rider, Illustrator</p>
+    <p><em>Project Link: </em><a href="https://phroggydev.itch.io/yaoguai-jump" target="_blank">https://phroggydev.itch.io/yaoguai-jump</a></p>
+</div>
+</section>
+<iframe id="demo"
+src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p id="caption">In case video is not working use link: <a href="" target="_blank">Here!</a></p>
+<div id="input_content">
+    <div id="text">
+    <p>
+        <em>Lets jump some Yaoguai!</em>
+    </p>
+    <p>
+        <em>Gameplay: </em>In ‘Yaoguai Jump’, you play as a young Spanish boy named Pedro, who through time travel
+        hijinks, is currently a Daoist priest in training in ancient China! Hop skip and jump your way your way around
+        the arena to beat up the Yaoguai, and progress in your training!
+    </p>
+    <p>
+        <em>Application of Themes: </em> This game was created as a part of a team for the University of Portsmouth Game
+        Jam Autumn 2026. Our themes were <i>Spooky, Pedro Antonio Gines Esteo,</i> and, <i>Chewang, Lanling County</i>.
+        We decided to set our game in ancient Chewang which, in lack of extensive environment, was simplified to ancient
+        China. To implement the spooky theme we made our main enemy Yaoguai. Similar to Yokai in Japan, Yaoguai are
+        supernatural creates often nefarious in nature. Our enemies are a subset of Yaoguai known as Jiangshi. They are
+        zombie/vampire-like creatures and the name literally translates to 'stiff corpse'. Jiangshi are often exorcised
+        by Taoist or Daoist priests using talismans. Placing one on their head petrifies them.
+    <p>
+        Our Jiangshi move towards the player in very specific ways. We programmed them so their movements are
+        representative of the 6 types of chess pieces. The enemies are confined to a grid where they locate the next
+        valid position closest to the player.
+    </p>
+    <p>
+        Meanwhile the player character, named Pedro after Pedro Antonio Gines Esteo, has a seperate attack collider at
+        his feet so that he may only defeat the Jiangshi by jumping on their heads.
+    </p>
+    <p>
+        <em>UI: </em>While I helped with some small functions collecting and setting variables from the player and
+        overall scene changes, UI was my main contribution in this project. I developed a timer that the other
+        programmers based the enemy waves on, HUD icons that gave in-game player feedback, a leaderboard to display top
+        5 scores stored in a json file, and other canvases to assist with cleanly opening and closing gameplay.
+    </p>
+    <p>
+        The leaderboard in particular was interesting. Name input is collected from the player with a three character
+        limit. I then decided to have it sort the file when it is giving me the data to populate the leaderboard using
+        .OrderByDescending() with a limit to only give me the top 5. While this works for a small game, I foresee issues
+        with the json file potentially becoming too big. There is a hotkey to clear the file/leaderboard, yet that is a
+        dev feature. In the future it may be better to validate the entry against other entries so the json file will
+        only contain the top 5. Additionally adding duplicate name validation would be a good addition.
+    </p>
+    <p>
+        Credits given to my amazing game jam team:
+        <br>
+        Ryan Bester - Programmer
+        <br>
+        Kieran Reid - Programmer and UI development
+        <br>
+        Riley Noles - Programmer
+        <br>
+        George Smith - Character Artist
+        <br>
+        Will - Environment Artist
+        <br>
+        Matthew Shelley - Music and Sound Effects
+        <br>
+        Grace Lewis - Producer
+    </p>
+</div>
+<div id="images">
+</div>
+</div>
+</main>
+
+<footer>
+    <ul>
+        
+        
+        <li>
+            <a href="/">
+            Home
+            </a> &#9642 </li>
+        
+        
+        
+        <li>
+            <a href="/CV/">
+            CV
+            </a> &#9642 </li>
+        
+        
+        
+        
+            <li>
+            <a href="/Archivist/">
+            The Archivist
+            </a> &#9642 </li>
+        
+            <li>
+            <a href="/froggy-breeze/">
+            Froggy Breeze
+            </a> &#9642 </li>
+        
+            <li>
+            <a href="/yaoguai-jump/">
+            Yaoguai Jump
+            </a> &#9642 </li>
+        
+            <li>
+            <a href="/Ritzy/">
+            Ritzy
+            </a> &#9642 </li>
+        
+            <li>
+            <a href="/Jataka-tales/">
+            The Jataka Tales
+            </a> &#9642 </li>
+        
+        
+        
+    </ul>
+    <div class="social_icons">
+    <a href="www.linkedin.com/in/kieranreid0003" target="_blank">
+        <img
+        src="/images/linkedin.png">
+    </a>
+    <a href="https://www.instagram.com/reid_artthings/" target="_blank">
+        <img
+        src="/images/instagram.png">
+    </a>
+    <a href="https://github.com/starkiwi" target="_blank">
+        <img src="/images/github.png">
+    </a>
+    </div>
+</footer>
+</body>
+<!--JQUERY-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-------SCRIPTS----------->
+<script src="/slicknav/jquery.slicknav.min.js"></script>
+<script src="/scripting/scripting.js"></script>
+</html>
