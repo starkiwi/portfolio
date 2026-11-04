@@ -15,6 +15,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./scripting/");
 
     eleventyConfig.ignores.add("_site/**");
+    eleventyConfig.ignores.add("README.md");
 
     return {
       dir: {
