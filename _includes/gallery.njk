@@ -1,0 +1,32 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<h1>Projects</h1>
+<section class="gallery">
+    {% for item in nav %}
+    {% if item.children %}
+    {% for child in item.children %}
+        <div class="card">
+            <a href="{{ permalink }}">
+            <img class="gif_img" src="{{ square }}">
+            <div class = "caption">
+                <h4>{{ title }}</h4>
+                <p>{{ description }}</p>
+            </div>
+            </a>
+        </div>
+    {% endfor %}
+    {% else %}
+    <div class="card">
+            <a href="{{ permalink }}">
+            <img class="gif_img" src="{{ square }}">
+            <div class = "caption">
+                <h4>{{ title }}</h4>
+                <p>{{ description }}</p>
+            </div>
+            </a>
+        </div>
+    {% endif %}
+    {% endfor %}
+</section>
+{% endblock %}
