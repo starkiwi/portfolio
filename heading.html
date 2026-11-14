@@ -1,0 +1,31 @@
+---
+layout: project.njk
+title: Heading
+permalink: /Heading/
+stylesheet: /styles/project.css
+description:  A small project using real star data and constellations to 'navigate' your ship.
+dates: October 2026 - November 2026
+roles: Game Designer, Programmer
+tech: Unreal Engine, c++
+demo: https://www.youtube.com/embed/9uzzYi_tP1Q?si=1BkgIrZm02Tm8eUf
+square: /images/heading/heading-square.png
+---
+<div id="text">
+    <p><em>Gameplay: </em>Heading is a small proof-of-concept minigame. The idea is that players are stranded at sea and must identify stars in specific constellations to navigate their way back to port. They must <em>find their heading</em>.</p>
+    <p>Stars are instanced meshes parsed from real life data to accurately portray their positions in the sky.</p>
+    <p>From an development standpoint, the focus of this project was an web API call from Unreal Engine with HTTP and Json. Which, as my first Unreal project was quite an undertaking.</p>
+    <p>Using Unreal's FHttpRequestRef I was able to access <a href="https://dieghernan.github.io/celestial_data/">this github repo</a> to parse the constellation lines dataset. I reviewed many datasets to use for this project to conclude this as the best for my purposes</p>
+    <p><em>Data Decisions: </em>My original thought was to use API Ninjas' stars API. However that did not include the polyline data for each constellation, only a list of stars. Furthermore, it also gave me all the stars in that constellations region, not just the ones we associate with that constellation.</p>
+    <p>Then I had found a github repo with constellation polylines listed as Yale Bright Star Catalog indexes. This was a good option. The only problem was that I would have to iterate through the Yale Bright Star Catalog to find each star in the polyline. With over 9,000 stars this was not the best method.</p>
+    <p>Perhaps the most beneficial trait of the dataset I picked was that it gave me the stars as rectangular coordinates already parsed from the stars right ascension and declination, meaning I didn't have to do that myself. I can search through to find the constellations I want parse the polylines into my own file, and plot the stars directly.</p>
+    <p><em>Drawing Constellations: </em>Another challenge I faced in this project was getting the constellation to show up when the player clicked all the stars in the constellation. Each time they select a star it turns red and the code verifies if it's constellation matches that of the other selected stars.</p>
+    <p>Each star's data was in a structure listing its X and Y positions, constellation name it was apart of, and index id. Similarly constellations were in a structure with their name, a count of the number of stars in the constellation, and an array of polylines. Working with multiple arrays of structures was difficult and it took thought to make sure all the id's stayed the same so there was no indexing out-of-bounds.</p>
+    <p><em>Credits: </em></p>
+    <p>Boat asset from <a href="https://koreanois.itch.io/boat-and-ship-sprites">koreanois</a> on itch.io</p>
+    <p>Star data and polylines from <a href="https://dieghernan.github.io/celestial_data/">dieghernan</a> on github</p>
+</div>
+<div id="images">
+    <img class="code_img" src="/images/heading/heading-screenshot.png">
+    <img class="code_img" src="/images/heading/heading_code01.png">
+    <img class="code_img" src="/images/heading/heading_code02.png">
+</div>
