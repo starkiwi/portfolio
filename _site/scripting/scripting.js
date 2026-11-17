@@ -25,6 +25,29 @@ window.addEventListener("load", async function () {
   }
 });
 
+function resizeHeroImage() {
+  const container = document.getElementsByClassName("hero-grid")[0];
+  const img = container.querySelector("img");
+
+  if (!img) return;
+
+  const containerRatio = container.clientWidth / container.clientHeight;
+  const imageRatio = img.naturalWidth / img.naturalHeight;
+
+  if (containerRatio > imageRatio) {
+      // Screen is wider: scale by width
+      img.style.width = "100%";
+      img.style.height = "auto";
+  } else {
+      // Screen is taller: scale by height
+      img.style.height = "100%";
+      img.style.width = "auto";
+  }
+}
+
+window.addEventListener("load", resizeHeroImage);
+window.addEventListener("resize", resizeHeroImage);
+
 // animated gif for cards
 $(function () {
   document.querySelectorAll(".gif_img").forEach((element) => {
