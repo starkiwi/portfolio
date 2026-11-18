@@ -1,32 +1,21 @@
 {% extends "base.njk" %}
 
 {% block content %}
+<div id="input_content">
+    {{ content | safe }}
+</div>
 <h1>Projects</h1>
 <section class="gallery">
-    {% for item in nav %}
-    {% if item.children %}
-    {% for child in item.children %}
+    {% for item in collections.project | sort(true, false, "data.numericalDate") %}
         <div class="card">
-            <a href="{{ permalink }}">
-            <img class="gif_img" src="{{ square }}">
+            <a href="{{ item.data.permalink }}">
+            <img class="gif_img" src="{{ item.data.square }}">
             <div class = "caption">
-                <h4>{{ title }}</h4>
-                <p>{{ description }}</p>
+                <h4>{{ item.data.title }}</h4>
+                <p>{{ item.data.description }}</p>
             </div>
             </a>
         </div>
-    {% endfor %}
-    {% else %}
-    <div class="card">
-            <a href="{{ permalink }}">
-            <img class="gif_img" src="{{ square }}">
-            <div class = "caption">
-                <h4>{{ title }}</h4>
-                <p>{{ description }}</p>
-            </div>
-            </a>
-        </div>
-    {% endif %}
     {% endfor %}
 </section>
 {% endblock %}

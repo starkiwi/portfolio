@@ -1,13 +1,8 @@
 <footer>
     <ul>
         {% for item in nav %}
-        {% if item.children %}
-        {% for child in item.children %}
-            <li>
-            <a href="{{ child.url }}">
-            {{ child.label }}
-            </a> &#9642 </li>
-        {% endfor %}
+        {% if item.children %} 
+        </>
         {% else %}
         <li>
             <a href="{{ item.url }}">
@@ -27,6 +22,9 @@
     </a>
     <a href="https://github.com/starkiwi" target="_blank">
         <img src="/images/github.png">
+    </a>
+    <a href="https://www.behance.net/reid_artthings" target="_blank">
+        <img src="/images/behance.png">
     </a>
     </div>
 </footer>
